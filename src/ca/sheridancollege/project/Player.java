@@ -1,49 +1,70 @@
 /**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
+ * Player class
  */
 package ca.sheridancollege.project;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * A class that models each Player in the game. Players have an identifier, which should be unique.
- *
- * @author dancye
- * @author Paul Bonenfant Jan 2020
+ * @author Jaskaran Kaur, Komalpreet Kaur, Jasmeen Kaur, Prinka 
+ *          March 2024
  */
-public abstract class Player {
+public class Player {
 
-    private String name; //the unique name for this player
+   //Fields:
+//hand (List of Cards)   
+//score (set constructor to 0)  
+//name
+    
+    List<Card> hand = new ArrayList<Card>();
+    int score;
+    String name; //the unique name for this player
 
-    /**
-     * A constructor that allows you to set the player's unique ID
-     *
-     * @param name the unique ID to assign to this player.
-     */
+  
     public Player(String name) {
         this.name = name;
+        this.score = 0;
+    }
+    
+//method to display the info about the player and list of cards the player has
+    
+    public void describe(){
+        System.out.println(name + " has the following cards: ");
+        System.out.println();
+        for (Card card : hand) {
+            card.describe();
+        }
+            //to separate the players   
+            System.out.println("-----------------------------------");
+    }
+    
+    
+//flip method to remove and returns the top card of hand  
+    
+    public Card flip(){
+        Card drawTopCard = hand.get(0);
+        hand.remove(0);
+        return drawTopCard;
     }
 
-    /**
-     * @return the player name
-     */
-    public String getName() {
-        return name;
+//adding the returned card to hand field
+    
+    public void draw (GroupOfCards groupofcards){
+        Card card = groupofcards.draw();
+        hand.add(card);
     }
-
-    /**
-     * Ensure that the playerID is unique
-     *
-     * @param name the player name to set
-     */
-    public void setName(String name) {
-        this.name = name;
+    
+//Incrementing the score after winning the turn(adding 1 to the player's score)  
+    
+    public void incrementScore(){
+        this.score++;
     }
-
-    /**
-     * The method to be overridden when you subclass the Player class with your specific type of Player and filled in
-     * with logic to play your game.
-     */
-    public abstract void play();
+    
+//Returning the score
+    
+    public int getScore(){
+        return score;
+    }
 
 }
