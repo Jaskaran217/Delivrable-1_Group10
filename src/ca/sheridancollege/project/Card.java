@@ -5,7 +5,6 @@
  * Value - (Values of the card from 2-14)
  * getter and setters for name and value fields
  * Describe method to print the information of the card
- * 
  */
 package ca.sheridancollege.project;
 
@@ -14,9 +13,11 @@ package ca.sheridancollege.project;
  * @author Jaskaran Kaur, Komalpreet Kaur, Jasmeen Kaur, Prinka   
  *          March 2024
  */
+
 public class Card {
     
 //Enum for the Values of cards
+    
     public enum Value {
         TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE;
     }
