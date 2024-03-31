@@ -1,6 +1,7 @@
 /**
  *GroupOfCards Class
  */
+
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.List;
  * @author Jaskaran Kaur, Komalpreet Kaur, Jasmeen Kaur, Prinka 
  *          March 2024
  */
+
 public class GroupOfCards {
 
    //List of Cards
