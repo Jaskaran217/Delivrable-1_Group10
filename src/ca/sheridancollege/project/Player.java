@@ -1,6 +1,7 @@
 /**
  * Player class
  */
+
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
