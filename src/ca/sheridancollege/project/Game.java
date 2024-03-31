@@ -7,6 +7,7 @@
  * Play the game
  * Declare the winner
  */
+
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
@@ -15,9 +16,11 @@ import java.util.ArrayList;
  * @author Jaskaran Kaur , Komalpreet Kaur, Jasmeen Kaur, Prinka
  *          March 2024
  */
+
 public class Game {
     
-//main method 
+    //main method 
+    
     public static void main(String[] args){
        
        //Instantiate GroupOfCards and two players and called the shuffle method        
@@ -62,6 +65,7 @@ public class Game {
         } 
         
         // comparing the final score of the players
+        
         if (player1.score > player2.score){
             System.out.println("Player 1 " +" is the winner!!! With a Score of " + player1.score );
             System.out.println( "Player 2 loses with the score of " + player2.score);
